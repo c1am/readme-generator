@@ -12,7 +12,7 @@ async function main() {
   const markDown = generateMarkdown(answers);
 
   // save file
-  const fileName = await saveMarkdown(markDown);
+  const fileName = await saveMarkdown(markdown);
 
 }
 
