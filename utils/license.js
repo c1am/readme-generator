@@ -83,4 +83,4 @@ function license_description(license) {
     return license_desc_text;
 }
 
-module.exports = license;
+module.exports = license_description;

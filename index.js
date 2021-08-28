@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const questions = require("./utils/questions");
-const generateMarkDown = require("./utils/generateMarkdown");
-const saveMarkDown = require("./utils/saveMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
+const createMarkdown = require("./utils/createMarkdown");
 
 async function main() {
 
@@ -9,11 +9,10 @@ async function main() {
   const answers = await inquirer.prompt(questions)
 
   // generate markdown from answers
-  const markDown = generateMarkdown(answers);
+  const markdown = generateMarkdown(answers);
 
   // save file
-  const fileName = await saveMarkdown(markdown);
-
+  const new_readme_name = await createMarkdown(markdown);
 }
 
 // start
